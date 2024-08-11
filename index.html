@@ -65,4 +65,46 @@
             transition: background-color 0.3s ease; /* Smooth transition for hover effect */
         }
         .password-container input[type="submit"]:hover {
-            background-color
+            background-color: #a53e11ab; /* Darker shade on hover */
+        }
+        #error-message {
+            color: red;
+            display: none;
+            font-size: 1em;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://github.com/Quipuadvisors/testertracker/raw/main/quipu%20logo%20-%20sin%20letras.png" alt="Company Logo" class="logo">
+        <div class="title">quipu | <strong>legislative tracker</strong></div>
+        <div class="password-container">
+            <form id="password-form">
+                <input type="password" id="password" placeholder="Enter password" required>
+                <input type="submit" value="Submit">
+            </form>
+            <div id="error-message">Incorrect password</div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('password-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const password = document.getElementById('password').value;
+            if (password === 'quipu') {
+                window.location.href = 'https://lookerstudio.google.com/embed/reporting/d30a9526-e67f-4bf6-8e3f-a2b7f6e98bfa/page/p_wmhkf2h4id';
+            } else {
+                document.getElementById('error-message').style.display = 'block';
+            }
+        });
+
+        // Submit form when pressing Enter key
+        document.getElementById('password').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                document.getElementById('password-form').dispatchEvent(new Event('submit'));
+            }
+        });
+    </script>
+</body>
+</html>
