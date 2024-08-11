@@ -22,16 +22,17 @@
             width: 100%;
         }
         .logo {
-            width: 100px; /* Adjusted logo size */
+            width: 90px; /* Adjusted logo size */
             margin-bottom: 10px; /* Space below logo */
         }
         .title {
-            font-size: 2.2em; /* Adjusted font size */
+            font-size: 2em; /* Adjusted font size */
             color: #bf4e14ab; /* Logo color */
-            margin-bottom: 20px;
+            margin: 0 auto 20px auto; /* Centered title */
             text-transform: lowercase; /* Small caps effect */
             letter-spacing: 0.05em; /* Adjusted spacing */
             white-space: nowrap; /* Prevent line breaks */
+            max-width: 100%; /* Ensure title fits within container */
         }
         .title strong {
             font-weight: bold;
@@ -51,7 +52,7 @@
             font-size: 1.2em; /* Larger font size */
             border: 1px solid #bf4e14ab; /* Border color matching the logo */
             border-radius: 4px;
-            width: 100%; /* Full width of container */
+            width: calc(100% - 32px); /* Full width minus padding */
             box-sizing: border-box;
             margin-bottom: 10px;
         }
