@@ -19,7 +19,7 @@
         .container {
             text-align: center;
             width: 100%;
-            max-width: 800px; /* Match the width of the title */
+            max-width: 800px; /* Updated to match the width of the title */
             padding: 20px; /* Padding to ensure elements are not touching edges */
         }
         .logo {
@@ -42,34 +42,9 @@
             margin: 0; /* Reset margin */
             padding: 0; /* Reset padding */
             display: inline-block; /* Ensure width is adjusted to content */
-            opacity: 0; /* Start hidden for animation */
         }
         .title strong {
             font-weight: bold;
-        }
-        .title .first {
-            animation: fadeIn 1s ease-in forwards;
-        }
-        .title .pipe {
-            animation: fadeIn 1s 1s ease-in forwards; /* Delayed fade-in */
-        }
-        .title .second {
-            animation: slideIn 1s 2s ease-in forwards; /* Delayed sliding animation */
-        }
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-            }
-        }
-        @keyframes slideIn {
-            from {
-                transform: translateX(100%);
-                opacity: 0;
-            }
-            to {
-                transform: translateX(0);
-                opacity: 1;
-            }
         }
         .password-container {
             background-color: #fff; /* White background for container */
@@ -114,11 +89,7 @@
     <div class="container">
         <img src="https://github.com/Quipuadvisors/testertracker/raw/main/quipu%20logo%20-%20sin%20letras.png" alt="Company Logo" class="logo">
         <div class="title-container">
-            <div class="title">
-                <span class="first">quipu</span> 
-                <span class="pipe"> | </span>
-                <span class="second"><strong>legislative tracker</strong></span>
-            </div>
+            <div class="title">quipu | <strong>legislative tracker</strong></div>
         </div>
         <div class="password-container">
             <form id="password-form">
