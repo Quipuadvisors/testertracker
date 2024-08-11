@@ -27,7 +27,7 @@
         }
         .title {
             font-size: 2em; /* Larger font size for better readability */
-            color: #4a3c31; /* Match with the logo color */
+            color: #bf4e14ab; /* Match with the logo color */
             margin-bottom: 20px;
             text-transform: lowercase; /* Small caps effect */
             letter-spacing: 0.05em; /* Adjust spacing for better readability */
@@ -42,12 +42,12 @@
             box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
             display: inline-block; /* Keep container in place */
             text-align: left; /* Align text inside container */
-            border: 1px solid #4a3c31; /* Border color matching the logo */
+            border: 1px solid #bf4e14ab; /* Border color matching the logo */
         }
         .password-container input[type="password"] {
             padding: 15px;
             font-size: 1.2em; /* Larger font size for the input field */
-            border: 1px solid #4a3c31; /* Border color matching the logo */
+            border: 1px solid #bf4e14ab; /* Border color matching the logo */
             border-radius: 4px;
             width: 100%; /* Full width input */
             box-sizing: border-box; /* Include padding in width */
@@ -57,7 +57,7 @@
             padding: 15px;
             font-size: 1.2em; /* Larger font size for the button */
             border: none;
-            background-color: #4a3c31; /* Button color matching the logo */
+            background-color: #bf4e14ab; /* Button color matching the logo */
             color: white;
             border-radius: 4px;
             cursor: pointer;
@@ -65,46 +65,4 @@
             transition: background-color 0.3s ease; /* Smooth transition for hover effect */
         }
         .password-container input[type="submit"]:hover {
-            background-color: #3d2a1b; /* Darker shade on hover */
-        }
-        #error-message {
-            color: red;
-            display: none;
-            font-size: 1em;
-            margin-top: 10px;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <img src="https://github.com/Quipuadvisors/testertracker/raw/main/quipu%20logo%20-%20sin%20letras.png" alt="Company Logo" class="logo">
-        <div class="title">quipu | <strong>legislative tracker</strong></div>
-        <div class="password-container">
-            <form id="password-form">
-                <input type="password" id="password" placeholder="Enter password" required>
-                <input type="submit" value="Submit">
-            </form>
-            <div id="error-message">Incorrect password</div>
-        </div>
-    </div>
-    <script>
-        document.getElementById('password-form').addEventListener('submit', function(event) {
-            event.preventDefault();
-            const password = document.getElementById('password').value;
-            if (password === 'quipu') {
-                window.location.href = 'https://lookerstudio.google.com/embed/reporting/d30a9526-e67f-4bf6-8e3f-a2b7f6e98bfa/page/p_wmhkf2h4id';
-            } else {
-                document.getElementById('error-message').style.display = 'block';
-            }
-        });
-
-        // Submit form when pressing Enter key
-        document.getElementById('password').addEventListener('keypress', function(event) {
-            if (event.key === 'Enter') {
-                event.preventDefault();
-                document.getElementById('password-form').dispatchEvent(new Event('submit'));
-            }
-        });
-    </script>
-</body>
-</html>
+            background-color
