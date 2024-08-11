@@ -1,10 +1,71 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <!-- Link to Google Fonts for Montserrat -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+
   <style>
-    body { font-family: Arial, sans-serif; }
-    .container { width: 300px; margin: 100px auto; }
-    .hidden { display: none; }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f1ea; /* Off-white background */
+      color: #5a4c41; /* Dark brown text */
+    }
+    .container {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    #loginContainer {
+      background-color: #e3d4c3; /* Light brown background */
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    #loginContainer h2 {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+    #loginContainer form {
+      display: inline-block;
+    }
+    #loginContainer label,
+    #loginContainer input,
+    #loginContainer button {
+      display: block;
+      margin: 10px auto;
+    }
+    #loginContainer input {
+      padding: 10px;
+      font-size: 1em;
+      border: 1px solid #bca8a0; /* Light brown border */
+      border-radius: 4px;
+    }
+    #loginContainer button {
+      background-color: #f5b26f; /* Light orange button */
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+    #loginContainer button:hover {
+      background-color: #e59442; /* Darker orange on hover */
+    }
+    #errorMessage {
+      color: #e94f4f; /* Red for error messages */
+      font-size: 1em;
+    }
   </style>
 </head>
 <body>
@@ -15,11 +76,11 @@
       <input type="password" id="password" name="password">
       <button type="button" onclick="checkPassword()">Submit</button>
     </form>
-    <p id="errorMessage" style="color: red;" class="hidden">Incorrect password</p>
+    <p id="errorMessage" class="hidden">Incorrect password</p>
   </div>
-  <div id="dashboardContainer" class="hidden">
+  <div id="dashboardContainer" class="hidden container">
     <!-- Embed your Looker Studio dashboard here -->
-    <iframe width="100%" height="600" src="https://lookerstudio.google.com/embed/reporting/3996cf7c-9d97-4639-9228-8eecd3119f74/page/oGm4D" frameborder="0"></iframe>
+    <iframe src="https://lookerstudio.google.com/embed/reporting/3996cf7c-9d97-4639-9228-8eecd3119f74/page/oGm4D" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
   </div>
   <script>
     function checkPassword() {
