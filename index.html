@@ -79,7 +79,6 @@
       height: 100vh;
       background-color: #f4f1ea; /* Same background color as body */
       overflow: hidden;
-      position: relative;
     }
     #dashboardContainer iframe {
       width: 100%;
@@ -108,9 +107,7 @@
       
       if (password === correctPassword) {
         document.getElementById('loginContainer').style.display = 'none';
-        setTimeout(function() {
-          document.getElementById('dashboardContainer').style.display = 'block'; // Use block to ensure proper display
-        }, 500); // Delay in milliseconds to ensure proper loading
+        document.getElementById('dashboardContainer').style.display = 'block'; // Show dashboard container
       } else {
         document.getElementById('errorMessage').style.display = 'block';
       }
