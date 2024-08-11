@@ -25,6 +25,7 @@
       width: 100%;
       max-width: 400px; /* Set a max width for the login container */
       text-align: center;
+      position: relative; /* Position relative for centering */
     }
     #loginContainer h2 {
       font-size: 2em;
@@ -79,6 +80,8 @@
       background-color: #f4f1ea; /* Same background color as body */
       overflow: hidden; /* Prevent scrollbars */
       position: relative; /* Ensure proper positioning */
+      padding: 0;
+      margin: 0;
     }
     #dashboardContainer iframe {
       width: 100%;
@@ -109,7 +112,7 @@
       if (password === correctPassword) {
         document.getElementById('loginContainer').style.display = 'none';
         setTimeout(function() {
-          document.getElementById('dashboardContainer').style.display = 'flex';
+          document.getElementById('dashboardContainer').style.display = 'block'; // Use block to ensure proper display
         }, 500); // Delay in milliseconds to ensure proper loading
       } else {
         document.getElementById('errorMessage').style.display = 'block';
