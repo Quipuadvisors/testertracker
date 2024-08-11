@@ -19,25 +19,27 @@
         .container {
             text-align: center;
             width: 100%;
+            max-width: 600px; /* Limit container width */
         }
         .logo {
-            width: 90px; /* Adjusted logo size */
+            width: 80px; /* Adjusted logo size */
             margin-bottom: 10px; /* Space below logo */
         }
         .title-container {
             display: flex;
             justify-content: center;
             width: 100%;
+            margin-bottom: 20px; /* Space below title container */
         }
         .title {
-            font-size: 2em; /* Adjusted font size */
+            font-size: 2.5em; /* Adjusted font size */
             color: #bf4e14ab; /* Logo color */
             text-transform: lowercase; /* Small caps effect */
             letter-spacing: 0.05em; /* Adjusted spacing */
             white-space: nowrap; /* Prevent line breaks */
-            max-width: 400px; /* Limit width for centering */
-            margin: 2; /* Reset margin */
-            padding: 0 20px; /* Padding for symmetrical protrusion */
+            margin: 0; /* Reset margin */
+            padding: 0; /* Reset padding */
+            display: inline-block; /* Ensure width is adjusted to content */
         }
         .title strong {
             font-weight: bold;
@@ -48,9 +50,11 @@
             border-radius: 8px;
             box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
             border: 1px solid #bf4e14ab; /* Border color matching the logo */
-            display: inline-block;
             text-align: center; /* Center text inside the container */
-            margin-top: 20px; /* Space above password container */
+            width: 100%;
+            max-width: 400px; /* Align width with title */
+            box-sizing: border-box;
+            margin: 0 auto; /* Center horizontally */
         }
         .password-container input[type="password"],
         .password-container input[type="submit"] {
