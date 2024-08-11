@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>quipu | legislative tracker</title>
+    <title>Quipu | Legislative Tracker</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap">
     <style>
         body {
             display: flex;
@@ -19,13 +20,15 @@
             text-align: center;
         }
         .logo {
-            width: 300px; /* Adjust width to match the title width */
-            margin-bottom: 20px;
+            width: 200px; /* Slightly smaller logo */
+            margin-bottom: 10px; /* Adjust margin to match text positioning */
         }
         .title {
-            font-size: 2em;
+            font-size: 1.5em;
             color: #5c3a1c; /* Earthy brown color */
             margin-bottom: 20px;
+            text-transform: lowercase; /* Small caps effect */
+            letter-spacing: 0.1em; /* Adjust spacing for better readability */
         }
         .title strong {
             font-weight: bold;
@@ -35,12 +38,16 @@
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            display: inline-block; /* Keep container in place */
+            text-align: left; /* Align text inside container */
         }
         .password-container input[type="password"] {
             padding: 10px;
             font-size: 1em;
             border: 1px solid #ddd;
             border-radius: 4px;
+            width: 100%; /* Full width input */
+            box-sizing: border-box; /* Include padding in width */
         }
         .password-container input[type="submit"] {
             padding: 10px;
@@ -51,22 +58,27 @@
             border-radius: 4px;
             cursor: pointer;
             margin-top: 10px;
+            width: 100%; /* Full width button */
         }
         .password-container input[type="submit"]:hover {
             background-color: #e07b39; /* Darker orange on hover */
+        }
+        #error-message {
+            color: red;
+            display: none;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <img src="https://github.com/Quipuadvisors/testertracker/raw/main/quipu%20logo%20-%20sin%20letras.png" alt="Company Logo" class="logo">
-        <div class="title">Quipu | <strong>Legislative Tracker</strong></div>
+        <div class="title">quipu | <strong>legislative tracker</strong></div>
         <div class="password-container">
             <form id="password-form">
                 <input type="password" id="password" placeholder="Enter password" required>
                 <input type="submit" value="Submit">
             </form>
-            <div id="error-message" style="color: red; display: none;">Incorrect password</div>
+            <div id="error-message">Incorrect password</div>
         </div>
     </div>
     <script>
