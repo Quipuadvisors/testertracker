@@ -1,118 +1,92 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <!-- Link to Google Fonts for Montserrat -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
-
-  <style>
-    body {
-      font-family: 'Montserrat', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f1ea; /* Off-white background */
-      color: #5a4c41; /* Dark brown text */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      overflow: hidden;
-    }
-    #loginContainer {
-      background-color: #e3d4c3; /* Light brown background */
-      border-radius: 8px;
-      padding: 20px;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-      width: 100%;
-      max-width: 400px; /* Max width for the login container */
-      text-align: center;
-      position: relative;
-    }
-    #loginContainer h2 {
-      font-size: 2em;
-      margin-bottom: 20px;
-      color: #5a4c41; /* Dark brown text */
-    }
-    #loginContainer form {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    #loginContainer label,
-    #loginContainer input,
-    #loginContainer button {
-      width: 100%;
-      margin: 10px 0;
-    }
-    #loginContainer label {
-      font-size: 1.2em;
-      color: #5a4c41; /* Dark brown text */
-    }
-    #loginContainer input {
-      padding: 10px;
-      font-size: 1em;
-      border: 1px solid #bca8a0; /* Light brown border */
-      border-radius: 4px;
-      width: calc(100% - 22px); /* Adjust width */
-    }
-    #loginContainer button {
-      background-color: #f5b26f; /* Light orange button */
-      color: #fff;
-      border: none;
-      padding: 10px;
-      border-radius: 4px;
-      font-size: 1.2em;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-    #loginContainer button:hover {
-      background-color: #e59442; /* Darker orange on hover */
-    }
-    #errorMessage {
-      color: #e94f4f; /* Red for error messages */
-      font-size: 1em;
-      margin-top: 10px;
-      display: none; /* Hide error message initially */
-    }
-    #dashboardContainer {
-      display: none; /* Hide dashboard container initially */
-      width: 100%;
-      height: 100vh;
-      background-color: #f4f1ea; /* Same background color as body */
-      overflow: hidden;
-      position: relative;
-    }
-    #dashboardContainer iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quipu | legislative tracker</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0e6d6; /* Earthy pastel background color */
+            font-family: 'Montserrat', sans-serif;
+        }
+        .container {
+            text-align: center;
+        }
+        .logo {
+            width: 300px; /* Adjust width to match the title width */
+            margin-bottom: 20px;
+        }
+        .title {
+            font-size: 2em;
+            color: #5c3a1c; /* Earthy brown color */
+            margin-bottom: 20px;
+        }
+        .title strong {
+            font-weight: bold;
+        }
+        .password-container {
+            background-color: #ffffff; /* Off-white background */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+        }
+        .password-container input[type="password"] {
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .password-container input[type="submit"] {
+            padding: 10px;
+            font-size: 1em;
+            border: none;
+            background-color: #ff8c00; /* Earthy orange color */
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .password-container input[type="submit"]:hover {
+            background-color: #e07b39; /* Darker orange on hover */
+        }
+    </style>
 </head>
 <body>
-  <div id="loginContainer">
-    <h2>Login</h2>
-    <form id="loginForm" onsubmit="checkPassword(); return false;">
-      <label for="password">Password:</label>
-      <input type="password" id="password" name="password" onkeypress="if(event.key === 'Enter') { checkPassword(); return false; }">
-      <button type="button" onclick="checkPassword()">Submit</button>
-    </form>
-    <p id="errorMessage">Incorrect password</p>
-  </div>
-  <div id="dashboardContainer">
-    <iframe src="https://lookerstudio.google.com/embed/reporting/d30a9526-e67f-4bf6-8e3f-a2b7f6e98bfa/page/p_wmhkf2h4id" frameborder="0" allowfullscreen sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-storage-access-by-user-activation"></iframe>
-  </div>
-  <script>
-    function checkPassword() {
-      var password = document.getElementById('password').value;
-      var correctPassword = 'quipu'; // Set your password here
-      
-      if (password === correctPassword) {
-        document.getElementById('loginContainer').style.display = 'none';
-        document.getElementById('dashboardContainer').style.display = 'block'; // Show dashboard container
-      } else {
-        document.getElementById('errorMessage').style.display = 'block';
-      }
-    }
-  </script>
+    <div class="container">
+        <img src="https://github.com/Quipuadvisors/testertracker/raw/main/quipu%20logo%20-%20sin%20letras.png" alt="Company Logo" class="logo">
+        <div class="title">Quipu | <strong>Legislative Tracker</strong></div>
+        <div class="password-container">
+            <form id="password-form">
+                <input type="password" id="password" placeholder="Enter password" required>
+                <input type="submit" value="Submit">
+            </form>
+            <div id="error-message" style="color: red; display: none;">Incorrect password</div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('password-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const password = document.getElementById('password').value;
+            if (password === 'quipu') {
+                window.location.href = 'https://lookerstudio.google.com/embed/reporting/d30a9526-e67f-4bf6-8e3f-a2b7f6e98bfa/page/p_wmhkf2h4id';
+            } else {
+                document.getElementById('error-message').style.display = 'block';
+            }
+        });
+
+        // Submit form when pressing Enter key
+        document.getElementById('password').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                document.getElementById('password-form').dispatchEvent(new Event('submit'));
+            }
+        });
+    </script>
 </body>
 </html>
