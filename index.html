@@ -78,6 +78,7 @@
       height: 100vh;
       background-color: #f4f1ea; /* Same background color as body */
       overflow: hidden; /* Prevent scrollbars */
+      position: relative; /* Ensure proper positioning */
     }
     #dashboardContainer iframe {
       width: 100%;
@@ -98,7 +99,7 @@
   </div>
   <div id="dashboardContainer">
     <!-- Embed your updated Looker Studio dashboard here -->
-    <iframe src="https://lookerstudio.google.com/embed/reporting/d30a9526-e67f-4bf6-8e3f-a2b7f6e98bfa/page/p_wmhkf2h4id" frameborder="0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
+    <iframe src="https://lookerstudio.google.com/embed/reporting/d30a9526-e67f-4bf6-8e3f-a2b7f6e98bfa/page/p_wmhkf2h4id" frameborder="0" allowfullscreen sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-storage-access-by-user-activation"></iframe>
   </div>
   <script>
     function checkPassword() {
@@ -107,7 +108,9 @@
       
       if (password === correctPassword) {
         document.getElementById('loginContainer').style.display = 'none';
-        document.getElementById('dashboardContainer').style.display = 'flex';
+        setTimeout(function() {
+          document.getElementById('dashboardContainer').style.display = 'flex';
+        }, 500); // Delay in milliseconds to ensure proper loading
       } else {
         document.getElementById('errorMessage').style.display = 'block';
       }
