@@ -18,21 +18,26 @@
         }
         .container {
             text-align: center;
-            max-width: 400px;
             width: 100%;
         }
         .logo {
             width: 90px; /* Adjusted logo size */
             margin-bottom: 10px; /* Space below logo */
         }
+        .title-container {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
         .title {
             font-size: 2em; /* Adjusted font size */
             color: #bf4e14ab; /* Logo color */
-            margin: 0 auto 20px auto; /* Centered title */
             text-transform: lowercase; /* Small caps effect */
             letter-spacing: 0.05em; /* Adjusted spacing */
             white-space: nowrap; /* Prevent line breaks */
-            max-width: 100%; /* Ensure title fits within container */
+            max-width: 400px; /* Limit width for centering */
+            margin: 0; /* Reset margin */
+            padding: 0 20px; /* Padding for symmetrical protrusion */
         }
         .title strong {
             font-weight: bold;
@@ -45,6 +50,7 @@
             border: 1px solid #bf4e14ab; /* Border color matching the logo */
             display: inline-block;
             text-align: center; /* Center text inside the container */
+            margin-top: 20px; /* Space above password container */
         }
         .password-container input[type="password"],
         .password-container input[type="submit"] {
@@ -76,7 +82,9 @@
 <body>
     <div class="container">
         <img src="https://github.com/Quipuadvisors/testertracker/raw/main/quipu%20logo%20-%20sin%20letras.png" alt="Company Logo" class="logo">
-        <div class="title">quipu | <strong>legislative tracker</strong></div>
+        <div class="title-container">
+            <div class="title">quipu | <strong>legislative tracker</strong></div>
+        </div>
         <div class="password-container">
             <form id="password-form">
                 <input type="password" id="password" placeholder="Enter password" required>
