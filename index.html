@@ -13,59 +13,65 @@
             justify-content: center;
             height: 100vh;
             margin: 0;
-            background-color: #f0e6d6; /* Earthy pastel background color */
+            background-color: #f7f5f0; /* Light background for a modern look */
             font-family: 'Montserrat', sans-serif;
         }
         .container {
             text-align: center;
+            max-width: 400px;
+            width: 100%;
         }
         .logo {
-            width: 200px; /* Slightly smaller logo */
+            width: 150px; /* Slightly smaller logo */
             margin-bottom: 10px; /* Adjust margin to match text positioning */
         }
         .title {
-            font-size: 1.5em;
-            color: #5c3a1c; /* Earthy brown color */
+            font-size: 2em; /* Larger font size for better readability */
+            color: #4a3c31; /* Match with the logo color */
             margin-bottom: 20px;
             text-transform: lowercase; /* Small caps effect */
-            letter-spacing: 0.1em; /* Adjust spacing for better readability */
+            letter-spacing: 0.05em; /* Adjust spacing for better readability */
         }
         .title strong {
             font-weight: bold;
         }
         .password-container {
-            background-color: #ffffff; /* Off-white background */
+            background-color: #fff; /* Off-white background for a sleek look */
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
             display: inline-block; /* Keep container in place */
             text-align: left; /* Align text inside container */
+            border: 1px solid #4a3c31; /* Border color matching the logo */
         }
         .password-container input[type="password"] {
-            padding: 10px;
-            font-size: 1em;
-            border: 1px solid #ddd;
+            padding: 15px;
+            font-size: 1.2em; /* Larger font size for the input field */
+            border: 1px solid #4a3c31; /* Border color matching the logo */
             border-radius: 4px;
             width: 100%; /* Full width input */
             box-sizing: border-box; /* Include padding in width */
+            margin-bottom: 10px; /* Space between input and button */
         }
         .password-container input[type="submit"] {
-            padding: 10px;
-            font-size: 1em;
+            padding: 15px;
+            font-size: 1.2em; /* Larger font size for the button */
             border: none;
-            background-color: #ff8c00; /* Earthy orange color */
+            background-color: #4a3c31; /* Button color matching the logo */
             color: white;
             border-radius: 4px;
             cursor: pointer;
-            margin-top: 10px;
             width: 100%; /* Full width button */
+            transition: background-color 0.3s ease; /* Smooth transition for hover effect */
         }
         .password-container input[type="submit"]:hover {
-            background-color: #e07b39; /* Darker orange on hover */
+            background-color: #3d2a1b; /* Darker shade on hover */
         }
         #error-message {
             color: red;
             display: none;
+            font-size: 1em;
+            margin-top: 10px;
         }
     </style>
 </head>
