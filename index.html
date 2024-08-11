@@ -22,11 +22,11 @@
             width: 100%;
         }
         .logo {
-            width: 100px; /* Adjusted logo size */
-            margin-bottom: 10px; /* Space below logo */
+            width: 120px; /* Adjusted logo size */
+            margin-bottom: 15px; /* Space below logo */
         }
         .title {
-            font-size: 1.5em; /* Adjusted font size */
+            font-size: 2em; /* Adjusted font size */
             color: #bf4e14ab; /* Logo color */
             margin-bottom: 20px;
             text-transform: lowercase; /* Small caps effect */
@@ -45,24 +45,20 @@
             text-align: left;
             border: 1px solid #bf4e14ab; /* Border color matching the logo */
         }
-        .password-container input[type="password"] {
+        .password-container input[type="password"],
+        .password-container input[type="submit"] {
             padding: 15px;
             font-size: 1.2em; /* Larger font size */
             border: 1px solid #bf4e14ab; /* Border color matching the logo */
             border-radius: 4px;
-            width: calc(100% - 32px); /* Adjusted width to fit container */
+            width: calc(100% - 32px); /* Full width minus padding */
             box-sizing: border-box;
             margin-bottom: 10px;
         }
         .password-container input[type="submit"] {
-            padding: 15px;
-            font-size: 1.2em;
-            border: none;
             background-color: #bf4e14ab; /* Button color matching the logo */
             color: white;
-            border-radius: 4px;
             cursor: pointer;
-            width: 100%; /* Full width button */
             transition: background-color 0.3s ease;
         }
         .password-container input[type="submit"]:hover {
