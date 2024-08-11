@@ -89,9 +89,9 @@
 <body>
   <div id="loginContainer">
     <h2>Login</h2>
-    <form id="loginForm">
+    <form id="loginForm" onsubmit="checkPassword(); return false;">
       <label for="password">Password:</label>
-      <input type="password" id="password" name="password">
+      <input type="password" id="password" name="password" onkeypress="if(event.key === 'Enter') { checkPassword(); return false; }">
       <button type="button" onclick="checkPassword()">Submit</button>
     </form>
     <p id="errorMessage">Incorrect password</p>
