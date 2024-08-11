@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quipu | Legislative Tracker</title>
+    <title>quipu | legislative tracker</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap">
     <style>
         body {
@@ -21,15 +21,13 @@
             width: 100%;
         }
         .logo {
-            width: 80px; /* Adjusted logo size */
+            width: 90px; /* Adjusted logo size */
             margin-bottom: 10px; /* Space below logo */
         }
         .title-container {
-            display: inline-block;
-            text-align: center;
-            width: 100%; /* Full width of container */
-            max-width: 500px; /* Max width for centering */
-            margin: 0;
+            display: flex;
+            justify-content: center;
+            width: 100%;
         }
         .title {
             font-size: 2em; /* Adjusted font size */
@@ -37,7 +35,9 @@
             text-transform: lowercase; /* Small caps effect */
             letter-spacing: 0.05em; /* Adjusted spacing */
             white-space: nowrap; /* Prevent line breaks */
+            max-width: 400px; /* Limit width for centering */
             margin: 0; /* Reset margin */
+            padding: 0 20px; /* Padding for symmetrical protrusion */
         }
         .title strong {
             font-weight: bold;
@@ -51,9 +51,6 @@
             display: inline-block;
             text-align: center; /* Center text inside the container */
             margin-top: 20px; /* Space above password container */
-            width: 100%;
-            max-width: 500px; /* Align width with title */
-            box-sizing: border-box;
         }
         .password-container input[type="password"],
         .password-container input[type="submit"] {
