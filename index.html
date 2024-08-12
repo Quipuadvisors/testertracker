@@ -103,8 +103,10 @@
             event.preventDefault();
             const password = document.getElementById('password').value;
             if (password === 'quipu') { // Replace 'quipu' with your actual password
+                const now = new Date().getTime();
                 localStorage.setItem('accessGranted', 'true'); // Set access token
-                window.location.href = 'https://quipuadvisors.github.io/trackerko/embeddedreport.html';
+                localStorage.setItem('accessTime', now.toString()); // Store the current time
+                window.location.href = 'https://quipuadvisors.github.io/trackerko/embededreport.html';
             } else {
                 document.getElementById('error-message').style.display = 'block';
             }
