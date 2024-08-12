@@ -12,17 +12,25 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            overflow: hidden; /* Prevent scrollbars */
+            overflow: hidden;
         }
         iframe {
-            width: 100vw; /* Full viewport width */
-            height: 100vh; /* Full viewport height */
+            width: 100vw;
+            height: 100vh;
             border: none;
-            box-sizing: border-box; /* Include padding and border in the width and height */
+            box-sizing: border-box;
         }
     </style>
 </head>
 <body>
+    <script>
+        // Check if accessGranted token is present in localStorage
+        if (localStorage.getItem('accessGranted') !== 'true') {
+            // If not, redirect to the landing page
+            window.location.href = 'https://quipuadvisors.github.io/trackerko/';
+        }
+    </script>
+
     <iframe src="https://lookerstudio.google.com/embed/reporting/d30a9526-e67f-4bf6-8e3f-a2b7f6e98bfa/page/p_wmhkf2h4id" allowfullscreen></iframe>
 </body>
 </html>
