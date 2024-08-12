@@ -25,8 +25,14 @@
 <body>
     <script>
         // Check if accessGranted token is present in localStorage
-        if (localStorage.getItem('accessGranted') !== 'true') {
-            // If not, redirect to the landing page
+        const accessGranted = localStorage.getItem('accessGranted');
+        const accessTime = localStorage.getItem('accessTime');
+        const now = new Date().getTime();
+
+        if (accessGranted !== 'true' || !accessTime || now - parseInt(accessTime, 10) > 86400000) { // 86400000ms = 24hrs
+            // If no token, or 24 hours have passed, reset the token and redirect to the landing page
+            localStorage.removeItem('accessGranted');
+            localStorage.removeItem('accessTime');
             window.location.href = 'https://quipuadvisors.github.io/trackerko/';
         }
     </script>
