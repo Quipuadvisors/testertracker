@@ -13,68 +13,68 @@
             justify-content: center;
             height: 100vh;
             margin: 0;
-            background-color: #f7f5f0; /* Light background */
+            background-color: #f7f5f0;
             font-family: 'Montserrat';
         }
         .container {
             text-align: center;
             width: 100%;
-            max-width: 800px; /* Updated to match the width of the title */
-            padding: 20px; /* Padding to ensure elements are not touching edges */
+            max-width: 800px;
+            padding: 20px;
         }
         .logo {
-            width: 150px; /* Enlarged logo size */
-            margin-bottom: 10px; /* Space below logo */
+            width: 150px;
+            margin-bottom: 10px;
         }
         .title-container {
             display: flex;
             justify-content: center;
             width: 100%;
-            margin-bottom: 20px; /* Space below title container */
+            margin-bottom: 20px;
         }
         .title {
-            font-size: 2.5em; /* Adjusted font size */
-            color: #bf4e14ab; /* Logo color */
-            text-transform: lowercase; /* Small caps effect */
-            letter-spacing: 0.05em; /* Adjusted spacing */
-            white-space: nowrap; /* Prevent line breaks */
-            max-width: 100%; /* Ensure title does not exceed container width */
-            margin: 0; /* Reset margin */
-            padding: 0; /* Reset padding */
-            display: inline-block; /* Ensure width is adjusted to content */
+            font-size: 2.5em;
+            color: #bf4e14ab;
+            text-transform: lowercase;
+            letter-spacing: 0.05em;
+            white-space: nowrap;
+            max-width: 100%;
+            margin: 0;
+            padding: 0;
+            display: inline-block;
         }
         .title strong {
             font-weight: bold;
         }
         .password-container {
-            background-color: #fff; /* White background for container */
+            background-color: #fff;
             padding: 20px;
             border-radius: 8px;
-            border: 1px solid #bf4e14ab; /* Border color matching the logo */
-            text-align: center; /* Center text inside the container */
+            border: 1px solid #bf4e14ab;
+            text-align: center;
             width: 100%;
-            max-width: 800px; /* Match width to title */
+            max-width: 800px;
             box-sizing: border-box;
-            margin: 0 auto; /* Center horizontally */
+            margin: 0 auto;
         }
         .password-container input[type="password"],
         .password-container input[type="submit"] {
             padding: 15px;
-            font-size: 1.2em; /* Larger font size */
-            border: 1px solid #bf4e14ab; /* Border color matching the logo */
+            font-size: 1.2em;
+            border: 1px solid #bf4e14ab;
             border-radius: 4px;
-            width: calc(100% - 32px); /* Full width minus padding */
+            width: calc(100% - 32px);
             box-sizing: border-box;
             margin-bottom: 10px;
         }
         .password-container input[type="submit"] {
-            background-color: #bf4e14ab; /* Button color matching the logo */
+            background-color: #bf4e14ab;
             color: white;
             cursor: pointer;
             transition: background-color 0.3s ease;
         }
         .password-container input[type="submit"]:hover {
-            background-color: #a53e11ab; /* Darker shade on hover */
+            background-color: #a53e11ab;
         }
         #error-message {
             color: red;
@@ -102,8 +102,9 @@
         document.getElementById('password-form').addEventListener('submit', function(event) {
             event.preventDefault();
             const password = document.getElementById('password').value;
-            if (password === 'quipu') {
-                window.location.href = 'https://quipuadvisors.github.io/trackerko/embeddedreport.html';
+            if (password === 'quipu') { // Replace 'quipu' with your actual password
+                localStorage.setItem('accessGranted', 'true'); // Set access token
+                window.location.href = 'https://quipuadvisors.github.io/trackerko/embededreport.html';
             } else {
                 document.getElementById('error-message').style.display = 'block';
             }
